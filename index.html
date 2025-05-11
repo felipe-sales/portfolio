@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portf&oacute;lio - Felipe Silva Pinheiro Sales</title>
+  <title>Portfólio - Felipe Silva Pinheiro Sales</title>
   <style>
     body {
       margin: 0;
@@ -11,7 +11,25 @@
       background-color: #f5f5f5;
       color: #333;
       line-height: 1.6;
+      animation: fadeIn 1s ease-in;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
     .container {
       max-width: 1200px;
       margin: 50px auto;
@@ -21,7 +39,13 @@
       overflow: hidden;
       display: flex;
       flex-direction: row;
+      transition: transform 0.3s ease;
     }
+
+    .container:hover {
+      transform: scale(1.01);
+    }
+
     .sidebar {
       width: 300px;
       background-color: #f0f0f0;
@@ -30,6 +54,7 @@
       flex-direction: column;
       align-items: center;
     }
+
     .photo-side {
       width: 180px;
       height: 180px;
@@ -37,29 +62,65 @@
       overflow: hidden;
       margin-bottom: 20px;
       border: 4px solid #007BFF;
+      transition: transform 0.3s ease;
     }
+
+    .photo-side:hover {
+      transform: scale(1.05);
+    }
+
     .photo-side img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .contact {
       text-align: center;
       font-size: 14px;
       color: #333;
       margin-top: 10px;
     }
+
     .contact p {
       margin: 5px 0;
     }
+
+    .download-btn {
+      margin-top: 20px;
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+      text-decoration: none;
+    }
+
     h1 {
       font-size: 28px;
       color: #007BFF;
       margin-top: 0;
     }
+
     .section {
       margin-bottom: 30px;
+      transition: background-color 0.3s ease;
+      padding: 10px;
+      border-radius: 8px;
     }
+
+    .section:hover {
+      background-color: #f9f9f9;
+    }
+
     .section h2 {
       font-size: 20px;
       color: #0056b3;
@@ -67,20 +128,25 @@
       padding-bottom: 5px;
       margin-bottom: 10px;
     }
+
     .content {
       flex: 1;
       padding: 30px 40px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     ul li {
       margin-bottom: 10px;
     }
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
       }
+
       .sidebar {
         width: 100%;
       }
@@ -96,10 +162,11 @@
       <div class="contact">
         <p><strong>Telefone:</strong> (11) 9 53858 - 8526</p>
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/felipe-silva-pinheiro-sales" target="_blank">/felipe-silva-pinheiro-sales</a></p>
-        <p><strong>Reside:</strong> S&atilde;o Paulo/SP</p>
+        <p><strong>Reside:</strong> São Paulo/SP</p>
       </div>
+      <a href="curriculo-felipe-sales.pdf" download class="download-btn">⬇️ Baixar Currículo</a>
       <div class="section">
-        <h2>Conhecimentos e Compet&ecirc;ncias</h2>
+        <h2>Conhecimentos e Competências</h2>
         <ul>
           <li>Linguagens: Delphi, Pascal, Java</li>
           <li>Frameworks: Spring Boot, Spring Data, Spring Cloud</li>
@@ -112,36 +179,34 @@
     </div>
     <div class="content">
       <h1>Felipe Silva Pinheiro Sales</h1>
-	  
-	  <div class="section">
-        <h2>Sobre</h2>
-        <p>Com mais de 9 anos de experi&ecirc;ncia em tecnologia da informa&ccedil;&atilde;o, atuo como Senior Information Technology System Analyst no Santander Tecnologia Brasil. Meu foco est&aacute; em garantir a continuidade e integridade de aplica&ccedil;&otilde;es cr&iacute;ticas, especialmente nas &aacute;reas de mensageria, antifraude e seguran&ccedil;a. Trabalhei com ferramentas como Splunk, Grafana, ServiceNow, ambientes cloud (AWS, Azure, OpenShift) e tecnologias como Kubernetes, Kafka, MongoDB, al&eacute;m de desenvolvimento em Java e pr&aacute;ticas DevOps.</p>
-      </div>
-	  
       <div class="section">
-        <h2>Experi&ecirc;ncias Profissionais</h2>
+        <h2>Sobre</h2>
+        <p>Com mais de 9 anos de experiência em tecnologia da informação, atuo como Senior Information Technology System Analyst no Santander Tecnologia Brasil. Meu foco está em garantir a continuidade e integridade de aplicações críticas, especialmente nas áreas de mensageria, antifraude e segurança. Trabalhei com ferramentas como Splunk, Grafana, ServiceNow, ambientes cloud (AWS, Azure, OpenShift) e tecnologias como Kubernetes, Kafka, MongoDB, além de desenvolvimento em Java e práticas DevOps.</p>
+      </div>
+      <div class="section">
+        <h2>Experiências Profissionais</h2>
         <h3>Santander</h3>
-        <p>Experi&ecirc;ncia em suporte de aplica&ccedil;&otilde;es cr&iacute;ticas com foco em mensageria, antifraude e seguran&ccedil;a, garantindo a continuidade dos servi&ccedil;os e a integridade dos sistemas. Conhecimento em ferramentas como Splunk, Grafana, Dynatrace, Control-M, ServiceNow, WebSphere, IBM MQ, Apigee e Kibana para monitoramento, an&aacute;lise de logs e resolu&ccedil;&atilde;o de incidentes de alta complexidade.<br>
-Tenho experi&ecirc;ncia s&oacute;lida em ambientes cloud (Azure, AWS, OpenShift), atuando com EKS, AKS, Kubernetes, Kafka, MongoDB e Databricks, assegurando performance e alta disponibilidade das solu&ccedil;&otilde;es.<br>
-Desenvolvimento em Java, Spring, Spring Boot, Maven, versionamento com GitHub e automa&ccedil;&otilde;es com pr&aacute;ticas de CI/CD, al&eacute;m de trabalhar com bancos de dados como Oracle, MySQL e SQL Server.<br>
-Nos &uacute;ltimos dois anos, venho exercendo a fun&ccedil;&atilde;o de Tech Lead, liderando uma equipe de desenvolvedores focada na evolu&ccedil;&atilde;o de aplica&ccedil;&otilde;es cr&iacute;ticas, com especial aten&ccedil;&atilde;o &agrave; mitiga&ccedil;&atilde;o de vulnerabilidades e moderniza&ccedil;&atilde;o de sistemas obsoletos.</p>
+        <p>Experiência em suporte de aplicações críticas com foco em mensageria, antifraude e segurança, garantindo a continuidade dos serviços e a integridade dos sistemas. Conhecimento em ferramentas como Splunk, Grafana, Dynatrace, Control-M, ServiceNow, WebSphere, IBM MQ, Apigee e Kibana para monitoramento, análise de logs e resolução de incidentes de alta complexidade.<br>
+        Tenho experiência sólida em ambientes cloud (Azure, AWS, OpenShift), atuando com EKS, AKS, Kubernetes, Kafka, MongoDB e Databricks, assegurando performance e alta disponibilidade das soluções.<br>
+        Desenvolvimento em Java, Spring, Spring Boot, Maven, versionamento com GitHub e automações com práticas de CI/CD, além de trabalhar com bancos de dados como Oracle, MySQL e SQL Server.<br>
+        Nos últimos dois anos, venho exercendo a função de Tech Lead, liderando uma equipe de desenvolvedores focada na evolução de aplicações críticas, com especial atenção à mitigação de vulnerabilidades e modernização de sistemas obsoletos.</p>
 
         <h3>Gocil</h3>
-        <p>Respons&aacute;vel pelo desenvolvimento e moderniza&ccedil;&atilde;o de um sistema para controle de contratos e gerenciamento de equipamentos, incluindo a implementa&ccedil;&atilde;o de funcionalidades para relat&oacute;rios e gr&aacute;ficos mensais. Migra&ccedil;&atilde;o de sistema legado em Pascal para nova plataforma em Java 8 com Spring Framework (Spring Boot, Spring MVC, Spring Data JPA).<br>
-Participa&ccedil;&atilde;o na modelagem de banco de dados (SQL Server), integra&ccedil;&atilde;o com sistemas em Delphi 7, desenvolvimento de dashboards, aplica&ccedil;&atilde;o de boas pr&aacute;ticas e apoio em documenta&ccedil;&atilde;o.</p>
+        <p>Responsável pelo desenvolvimento e modernização de um sistema para controle de contratos e gerenciamento de equipamentos, incluindo a implementação de funcionalidades para relatórios e gráficos mensais. Migração de sistema legado em Pascal para nova plataforma em Java 8 com Spring Framework (Spring Boot, Spring MVC, Spring Data JPA).<br>
+        Participação na modelagem de banco de dados (SQL Server), integração com sistemas em Delphi 7, desenvolvimento de dashboards, aplicação de boas práticas e apoio em documentação.</p>
 
         <h3>TCI</h3>
-        <p>Atua&ccedil;&atilde;o no desenvolvimento e manuten&ccedil;&atilde;o de sistemas de controle operacional de ambul&acirc;ncias. Desenvolvimento em Pascal com Delphi 5/7, banco Firebird (IBExpert), otimiza&ccedil;&atilde;o de processos, suporte t&eacute;cnico e valida&ccedil;&atilde;o com equipe operacional.</p>
+        <p>Atuação no desenvolvimento e manutenção de sistemas de controle operacional de ambulâncias. Desenvolvimento em Pascal com Delphi 5/7, banco Firebird (IBExpert), otimização de processos, suporte técnico e validação com equipe operacional.</p>
 
-        <h3>Nissei Inform&aacute;tica</h3>
-        <p>Atendimento como Auxiliar T&eacute;cnico de Inform&aacute;tica entre 2011 e 2014. Principais atividades:<br>
-        - Vendas de produtos de inform&aacute;tica;<br>
-        - Manuten&ccedil;&atilde;o de computadores e configura&ccedil;&atilde;o de sistemas;<br>
+        <h3>Nissei Informática</h3>
+        <p>Atendimento como Auxiliar Técnico de Informática entre 2011 e 2014. Principais atividades:<br>
+        - Vendas de produtos de informática;<br>
+        - Manutenção de computadores e configuração de sistemas;<br>
         - Suporte a sistemas online, garantindo funcionalidade e atendimento ao cliente.</p>
       </div>
 
       <div class="section">
-        <h2>Certifica&ccedil;&otilde;es</h2>
+        <h2>Certificações</h2>
         <ul>
           <li>ITIL 4 (2025 - 2028)</li>
           <li>SCRUM Foundations (2025)</li>
@@ -155,18 +220,18 @@ Participa&ccedil;&atilde;o na modelagem de banco de dados (SQL Server), integra&
       </div>
 
       <div class="section">
-        <h2>Forma&ccedil;&atilde;o</h2>
+        <h2>Formação</h2>
         <ul>
           <li>UTFPR - Desenvolvimento de Sistemas JAVA (2017 - 2018)</li>
-          <li>FATEC - Bacharelado em An&aacute;lise de Sistemas (2011 - 2014)</li>
-          <li>ETEC - T&eacute;cnico em Inform&aacute;tica (2010 - 2011)</li>
+          <li>FATEC - Bacharelado em Análise de Sistemas (2011 - 2014)</li>
+          <li>ETEC - Técnico em Informática (2010 - 2011)</li>
         </ul>
       </div>
 
       <div class="section">
         <h2>Idiomas</h2>
         <ul>
-          <li>Ingl&ecirc;s Intermedi&aacute;rio</li>
+          <li>Inglês Intermediário</li>
         </ul>
       </div>
     </div>
